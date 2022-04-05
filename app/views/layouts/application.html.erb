@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movieblog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Movie Blog</h1>
+      <div class = "menubar">
+        <ul class = "menu">
+          <li>Username</li>
+          <li>Sign out</li>
+          <li>New Post</li>
+        </ul>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      COPYRIGHT
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<div class = "index-content">
+ <div class = "contents">
+     <%= @tweets.each do |tweet| %>
+      <%= picture url %>
+      <%= tweet.story %>
+      <%= tweet.review %>
+      <%= more button %>
+     <% end %>
+ </div>
+</div>
