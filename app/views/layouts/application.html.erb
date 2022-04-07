@@ -14,9 +14,17 @@
       <h1>Movie Blog</h1>
       <div class = "menubar">
         <ul class = "menu">
-          <li>Username</li>
-          <li>Sign out</li>
-          <li>New Post</li>
+          <% if user_signed_in? %>
+            <li><%= current_user.username %></li>
+            <li><%= link_to "Sign out", destroy_user_session_path, class:"signout" %></li>
+            <li><%= link_to "New Post", new_tweet_path, class:"new-button" %></li>
+            <li><%= link_to "Mypage", user_path(current_user.id), class:"my-page" %></li>
+            <li><%= link_to "Back", root_path %></li>
+          <% else %>
+            <li><%= link_to "Sign in", new_user_session_path, class:"signin" %></li>
+            <li><%= link_to "Sign up", new_user_registration_path, class:"signup" %></li>
+            <li><%= link_to "Back", root_path %></li>
+          <% end %>
         </ul>
       </div>
     </header>

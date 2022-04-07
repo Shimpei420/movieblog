@@ -1,0 +1,8 @@
+<div class = "detail-content">
+    <%= @tweet.title %>
+    <%= @tweet.story %>
+    <%= @tweet.review %>
+    <%= link_to "EDIT", edit_tweet_path, class:"edit-button" %>
+    <%= link_to "DELETE", tweet_path, method: :delete, data: {confirm: "Are you sure you delete this?"}, class:"delete-button" %>
+    <%= link_to "BACK", root_path, class:"back-button" %>
+</div>

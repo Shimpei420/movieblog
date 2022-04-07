@@ -1,0 +1,15 @@
+   <% if current_page?(new_tweet_path) %> 
+     <%= form_with model: @tweet do |form| %>
+     <%= form.text_field :title, class:"title-bar"%>
+     <%= form.text_area :story, class:"story-bar"%>
+     <%= form.text_area :review, class:"review-bar"%>
+     <%= form.submit "POST", class:"post-button"%>
+     <% end %>
+   <% else %>
+     <%= form_with model: @tweet do |form| %>
+     <%= form.text_field :title, class:"title-bar"%>
+     <%= form.text_area :story, class:"story-bar"%>
+     <%= form.text_area :review, class:"review-bar"%>
+     <%= form.submit "UPDATE", class:"update-button"%>
+     <% end %>
+   <% end %>
