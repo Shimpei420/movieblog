@@ -1,0 +1,20 @@
+ <% if current_page?(root_path) %> 
+    <div class = "content-image"><%= image_tag tweet.image.url if tweet.image? %> </div>
+    <div class = "bottom-content">
+      <p class = "content-title"> Title : <%= tweet.title %> </p>
+      <p class = "story-review">Story</p>
+      <p class = "content-story"> <%= tweet.story %> </p>
+      <p class = "story-review">Review</p>
+      <p class = "content-review"> <%= tweet.review %> </p>
+      <%= link_to "More", tweet_path(tweet.id), class:"more-button" %>
+    </div>
+<% else %>
+    <div class = "content-image"><%= image_tag @tweet.image.url if tweet.image? %> </div>
+    <div class = "bottom-content">
+      <p class = "content-title"> Title : <%= @tweet.title %> </p>
+      <p class = "story-review">Story</p>
+      <p class = "content-story"> <%= @tweet.story %> </p>
+      <p class = "story-review">Review</p>
+      <p class = "content-review"> <%= @tweet.review %> </p>
+    </div>
+<% end %>

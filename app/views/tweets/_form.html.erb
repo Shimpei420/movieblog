@@ -1,15 +1,19 @@
    <% if current_page?(new_tweet_path) %> 
      <%= form_with model: @tweet do |form| %>
-     <%= form.text_field :title, class:"title-bar"%>
-     <%= form.text_area :story, class:"story-bar"%>
-     <%= form.text_area :review, class:"review-bar"%>
-     <%= form.submit "POST", class:"post-button"%>
+      <div class = "new-form">
+       <%= form.file_field :image, class:"image" %>
+       <%= form.text_field :title, placeholder:"Title", class:"title-bar"%>
+       <%= form.text_area :story, placeholder:"Story", class:"story-bar"%>
+       <%= form.text_area :review, placeholder:"Review", class:"review-bar"%>
+       <%= form.submit "POST", class:"post-button"%>
+      </div>
      <% end %>
    <% else %>
      <%= form_with model: @tweet do |form| %>
-     <%= form.text_field :title, class:"title-bar"%>
-     <%= form.text_area :story, class:"story-bar"%>
-     <%= form.text_area :review, class:"review-bar"%>
-     <%= form.submit "UPDATE", class:"update-button"%>
+      <%= form.file_field :image, class:"image" %>
+      <%= form.text_field :title, placeholder:"Title", class:"title-bar"%>
+      <%= form.text_area :story, placeholder:"Story", class:"story-bar"%>
+      <%= form.text_area :review, placeholder:"Review",class:"review-bar"%>
+      <%= form.submit "UPDATE", class:"update-button"%>
      <% end %>
    <% end %>

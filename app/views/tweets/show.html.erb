@@ -1,8 +1,37 @@
 <div class = "detail-content">
-    <%= @tweet.title %>
-    <%= @tweet.story %>
-    <%= @tweet.review %>
-    <%= link_to "EDIT", edit_tweet_path, class:"edit-button" %>
-    <%= link_to "DELETE", tweet_path, method: :delete, data: {confirm: "Are you sure you delete this?"}, class:"delete-button" %>
-    <%= link_to "BACK", root_path, class:"back-button" %>
+    <div class = "show-content">
+     <div class = "show-small-content">
+      <%= render partial: "tweets/tweet", object: @tweet %>
+     </div>
+     <div class = "buttons">
+      <%= link_to "EDIT", edit_tweet_path, class:"edit-button" %>
+      <%= link_to "DELETE", tweet_path, method: :delete, data: {confirm: "Are you sure you delete this?"}, class:"delete-button" %>
+      <%= link_to "BACK", root_path, class:"back-button" %>
+      </div>
+    </div>
+    <div class = "comment">
+     <div class = "comment-form">
+         <h2>Comment Form</h2>
+         <%= form_with(model: [@tweet, @comment], local: true) do |comment| %>
+          <%= comment.text_area :comment, class:"comment-bar"%>
+          <%= comment.submit "POST", class:"comment-post-button" %>
+        <% end %>
+     </div>
+     <div class = "comment-list">
+         <h2> Comments List</h2>
+        <% @comments.each do |comment| %>
+         <div class = "comments">
+          <div class = "comment-name-date">
+           <p class = "comment-name">Username : <%= comment.user.username %> </p>
+           <p class = "comment-date"> Updated at : <%= comment.updated_at %> </p>
+           <%= link_to "DELETE", tweet_comment_path(comment.tweet.id, comment.id), method: :delete, class:"comment-delete" %>
+          </div>
+          <div class = "comment-comment">
+           <p>Comment : <%= comment.comment %> </p>
+          </div>
+          
+         </div>
+        <% end %>
+     </div>
+    </div>
 </div>

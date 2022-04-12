@@ -1,11 +1,8 @@
 <div class = "index-content">
  <div class = "contents">
      <% @tweets.each do |tweet| %>
-     <div class = "content">
-       <%= tweet.title %>
-       <%= tweet.story %>
-       <%= tweet.review %>
-       <%= link_to "More", tweet_path(tweet.id), class:"more-button" %>
+      <div class = "content">
+       <%= render partial: "tweets/tweet", locals: {tweet: tweet} %>
       </div>
      <% end %>
  </div>

@@ -1,0 +1,194 @@
+/* Common part */
+body{
+    height:auto;
+    width:100%;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+}
+
+.movieblog{
+    margin-left:10px;
+    text-decoration:none;
+}
+
+.menubar{
+    margin-right:30px;
+    width:30vw;
+}
+
+.menu{
+    display:flex;
+    justify-content:space-around;
+    list-style:none;
+    font-size:20px;
+}
+
+.signout, .new-button, .my-page, .signin, .signup{
+    text-decoration:none;
+}
+
+/* content */
+
+.content-content{
+    height:auto;
+    width:100%;
+}
+
+.content{
+    height:auto;
+    width:700px;
+    margin:15px auto;
+    border:1px;
+    box-shadow: 0px 4px 8px #575;
+    transition: box-shadow .3s;
+    display:flex;
+}
+
+.content-image{
+    margin:auto 20px auto 5px;
+}
+
+.content-title{
+    font-size:25px;
+    font-weight:700;
+}
+
+.story-review{
+    font-size:20px;
+    font-weight:500;
+    border-bottom:solid 3px lightgreen;
+}
+
+/* New */
+
+h2{
+    text-align:center;
+}
+
+.new-content{
+    width:800px;
+    margin:auto;
+}
+
+.new-form{
+    
+}
+
+.title-bar{
+    height:30px;
+    width:700px;
+    display:block;
+    margin:auto;
+}
+
+.story-bar{
+    height:100px;
+    width:700px;
+    display:block;
+    margin:auto;
+}
+
+.review-bar{
+    height:70px;
+    width:700px;
+    display:block;
+    margin:auto;
+}
+
+.post-button, .update-button{
+    height:30px;
+    width:100px;
+    display:block;
+    margin:auto;
+}
+
+/* Show */
+.show-content{
+    height:auto;
+    width:700px;
+    margin:15px auto;
+    border:1px;
+    box-shadow: 0px 4px 8px #575;
+    transition: box-shadow .3s;
+}
+
+.show-small-content{
+    display:flex;
+}
+
+.buttons{
+    display:flex;
+    width:200px;
+    
+}
+
+.edit-button, .delete-button, .back-button{
+    margin:15px 10px;
+    border:1px;
+    box-shadow: 0px 4px 8px #575;
+    text-decoration:none;
+    background-color:lightgreen;
+    color:black;
+}
+
+/* comment */
+.comment-form{
+    margin:50px auto;
+}
+
+.comment-bar{
+    display:block;
+    margin:auto;
+    height:50px;
+    width:500px;
+}
+
+.comment-post-button{
+    display:block;
+    margin:20px auto;
+    height:30px;
+    width:100px;
+}
+
+.comment-list{
+    margin:auto;
+}
+
+.comments{
+    margin:0 auto 10px;
+    width:700px;
+    height:auto;
+    border:1px;
+    box-shadow: 0px 4px 8px #575;
+    
+}
+
+.comment-name-date{
+    display:flex;
+    justify-content:flex-start;
+}
+
+.comment-name{
+    margin:auto 10px auto 5px;
+    font-size:20px;
+}
+
+.comment-date{
+    margin:auto 20px auto 10px;
+    font-size:20px;
+}
+
+.comment-delete{
+    text-decoration:none;
+    margin:auto 0px auto 5px;
+    font-size:20px;
+}
+
+.comment-comment{
+    height:auto;
+    margin:0 0 auto 5px;
+    font-size:20px;
+}
