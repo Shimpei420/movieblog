@@ -10,8 +10,13 @@ header{
 }
 
 .movieblog{
-    margin-left:10px;
+    margin:auto 40px auto 10px;
     text-decoration:none;
+}
+
+.search-form{
+    width:600px;
+    margin:auto 10px auto auto;
 }
 
 .menubar{
@@ -44,25 +49,39 @@ header{
     border:1px;
     box-shadow: 0px 4px 8px #575;
     transition: box-shadow .3s;
+}
+
+.upper-content{
+    height:150px;
     display:flex;
+    position:relative;
 }
 
 .content-image{
-    margin:auto 20px auto 5px;
+    margin:auto 5px auto 5px;
 }
 
 .content-title{
-    font-size:25px;
-    font-weight:700;
+    font-size:30px;
+    font-weight:800;
+    margin:auto;
+    text-align:center;
 }
 
+
+.content-user{
+    position:absolute;
+    bottom:0;
+    right:0;
+    
+}
 .story-review{
     font-size:20px;
-    font-weight:500;
+    font-weight:600;
     border-bottom:solid 3px lightgreen;
 }
 
-/* New */
+/* New, Edit */
 
 h2{
     text-align:center;
@@ -98,11 +117,25 @@ h2{
     margin:auto;
 }
 
+.bottom-buttons{
+    width:700px;
+    display:flex;
+    margin:auto;
+}
+
 .post-button, .update-button{
     height:30px;
     width:100px;
     display:block;
     margin:auto;
+}
+
+.image{
+    display:block;
+    margin:auto;
+    width:700px;
+    font-size:15px;
+    border:solid 1px black;
 }
 
 /* Show */
@@ -116,7 +149,6 @@ h2{
 }
 
 .show-small-content{
-    display:flex;
 }
 
 .buttons{
@@ -191,4 +223,29 @@ h2{
     height:auto;
     margin:0 0 auto 5px;
     font-size:20px;
+}
+
+
+/* mypage */
+
+
+
+/* footer */
+footer{
+    font-size:15px;
+    text-align:center;
+    margin:20px auto 5px;
+}
+
+/* Search */
+.search-bar{
+    height:30px;
+    width:400px;
+    margin-left:10px;
+}
+
+.search-button{
+    height:30px;
+    width:100px;
+    margin-left:20px;
 }

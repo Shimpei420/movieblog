@@ -12,6 +12,7 @@
   <body>
     <header>
       <h1><%= link_to "Movie Blog", root_path, class:"movieblog"%></h1>
+      <%= render "tweets/search" %>
       <div class = "menubar">
         <ul class = "menu">
           <% if user_signed_in? %>

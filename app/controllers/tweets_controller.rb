@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
     
     def index
-        @tweets = Tweet.all.order("updated_at DESC")
+        @tweets = Tweet.all.includes(:user).order("updated_at DESC")
     end
     
     def show
@@ -40,6 +40,10 @@ class TweetsController < ApplicationController
        else
          redirect_to root_path
        end
+    end
+    
+    def search
+      @tweets = Tweet.search(params[:keyword])
     end
     
     private
