@@ -1,7 +1,23 @@
  <% if current_page?(root_path) or current_page?(search_tweets_path) %> 
     <div class = "upper-content">
      <div class = "content-image"><%= image_tag tweet.image.url if tweet.image? %> </div>
-     <p class = "content-title"> <%= tweet.title %> </p>
+     <div class ="title_rate">
+      <p class = "content-title"> <%= tweet.title %> </p>
+      <div class = star_rate>
+      <div id = "star-rate-<%= tweet.id %>"></div>
+       <script>
+        $('#star-rate-<%= tweet.id %>').raty({
+        size :36,
+        starOff :'<%= asset_path('star-off.png') %>',
+        starOn :'<%= asset_path('star-on.png') %>',
+        starHalf :'<%= asset_path('star-half.png') %>',
+        half: true,
+        readOnly: true,
+        score: <%= tweet.rate %>,
+        });
+       </script>
+       </div>
+      </div>
      <p class = "content-user">Posted by <%= tweet.user.username %></p>
     </div>
     <div class = "bottom-content">
@@ -14,8 +30,24 @@
 <% elsif current_page?(user_path(current_user.id)) %>
     <div class = "upper-content">
      <div class = "content-image"><%= image_tag tweet.image.url if tweet.image? %> </div>
-     <p class = "content-title"> <%= tweet.title %> </p>
-    </div>
+     <div class ="title_rate">
+      <p class = "content-title"> <%= tweet.title %> </p>
+      <div class = star_rate>
+      <div id = "star-rate-<%= tweet.id %>"></div>
+       <script>
+        $('#star-rate-<%= tweet.id %>').raty({
+        size :36,
+        starOff :'<%= asset_path('star-off.png') %>',
+        starOn :'<%= asset_path('star-on.png') %>',
+        starHalf :'<%= asset_path('star-half.png') %>',
+        half: true,
+        readOnly: true,
+        score: <%= tweet.rate %>,
+        });
+       </script>
+       </div>
+      </div>
+     </div>
     <div class = "bottom-content">
       <p class = "story-review">Story</p>
       <p class = "content-story"> <%= tweet.story.truncate(500) %> </p>
@@ -24,8 +56,24 @@
     </div>
 <% else %>
     <div class = "upper-content">
-     <div class = "content-image"><%= image_tag @tweet.image.url if @tweet.image? %> </div>
-     <p class = "content-title"> <%= @tweet.title %> </p>
+     <div class = "content-image"><%= image_tag @tweet.image.url if tweet.image? %> </div>
+     <div class ="title_rate">
+      <p class = "content-title"> <%= @tweet.title %> </p>
+      <div class = star_rate>
+      <div id = "star-rate-<%= @tweet.id %>"></div>
+       <script>
+        $('#star-rate-<%= @tweet.id %>').raty({
+        size :36,
+        starOff :'<%= asset_path('star-off.png') %>',
+        starOn :'<%= asset_path('star-on.png') %>',
+        starHalf :'<%= asset_path('star-half.png') %>',
+        half: true,
+        readOnly: true,
+        score: <%= @tweet.rate %>,
+        });
+       </script>
+       </div>
+      </div>
     </div>
     <div class = "bottom-content">
       <p class = "story-review">Story</p>

@@ -20,6 +20,6 @@ class CommentsController < ApplicationController
     
     private
     def comment_params
-        params.require(:comment).permit(:comment, :tweet_id)
+        params.require(:comment).permit(:comment, :tweet_id, :rate)
     end
 end

@@ -5,6 +5,7 @@
        <%= form.text_area :story, placeholder:"Story", class:"story-bar"%>
        <%= form.text_area :review, placeholder:"Review", class:"review-bar"%>
        <%= form.file_field :image, class:"image" %>
+       <%= form.number_field :rate, placeholder:"Rate", min:0, max:5, step:0.5, class:"rate-box" %> 
        <div class = "bottom-buttons">
        <%= form.submit "POST", class:"post-button"%>
        </div>
@@ -17,6 +18,7 @@
       <%= form.text_area :story, placeholder:"Story", class:"story-bar"%>
       <%= form.text_area :review, placeholder:"Review",class:"review-bar"%>
       <%= form.file_field :image, class:"image" %>
+      <%= form.number_field :rate, placeholder:"Rate", min:0, max:5, step:0.5, class:"rate-box" %> 
       <div class = "bottom-buttons">
       <%= form.submit "UPDATE", class:"update-button"%>
       <%= link_to "Back", tweet_path, class:"back-to-show" %>
